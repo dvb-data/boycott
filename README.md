@@ -88,7 +88,6 @@ Data is stored in `data/boycott-data.js` and includes:
 
 ## Data Source
 
-- [Justice For Myanmar](https://www.justiceformyanmar.org/)
 - [Burma Campaign UK](https://www.burmacampaign.org.uk/)
 - DVB Data Team
 
