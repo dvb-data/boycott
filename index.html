@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boycott List Search | ဘွိုင်းကောက်စာရင်း ရှာဖွေရန်</title>
+<style>
+  :root {
+    --navy: #1a2c86;
+    --navy-deep: #12184f;
+    --navy-tint: #e8eaf6;
+    --alert: #c00000;
+    --alert-dark: #8a0000;
+    --ink: #232323;
+    --ink-soft: #5f6368;
+    --paper: #f7f8fa;
+    --card: #ffffff;
+    --line: #e3e5ea;
+    --amber: #b8860b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Noto Sans Myanmar', 'Padauk', Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .dvb-hero {
+    max-width: 720px;
+    margin: 0 auto;
+    background: var(--navy);
+    padding: 34px 20px 32px;
+    text-align: center;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .dvb-hero .htitle {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    margin: 0 0 8px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    white-space: nowrap;
+  }
+  .dvb-hero .htitle img {
+    height: 36px;
+    width: auto;
+    display: block;
+  }
+  .dvb-hero p {
+    color: rgba(255,255,255,0.88);
+    font-size: 15px;
+    margin: 0;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 28px 20px 40px;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--navy);
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  h1 {
+    font-size: 22px;
+    margin: 0 0 8px;
+    line-height: 1.35;
+  }
+  .sub {
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin: 0 0 20px;
+    line-height: 1.6;
+  }
+  .search-box {
+    position: relative;
+    margin-bottom: 8px;
+  }
+  input#q {
+    width: 100%;
+    font-size: 16px;
+    padding: 14px 44px 14px 16px;
+    border: 2px solid var(--ink);
+    border-radius: 10px;
+    background: var(--card);
+    color: var(--ink);
+    font-family: inherit;
+  }
+  input#q:focus {
+    outline: none;
+    border-color: var(--navy);
+  }
+  .search-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--ink-soft);
+    pointer-events: none;
+  }
+  .hint {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin: 8px 2px 16px;
+  }
+  .filter-row {
+    position: relative;
+    margin-bottom: 18px;
+  }
+  .filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--card);
+    border: 1.5px solid var(--ink);
+    border-radius: 8px;
+    padding: 9px 14px;
+    cursor: pointer;
+  }
+  .filter-btn:hover { background: #f3ede2; }
+  .filter-count {
+    background: var(--navy);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 20px;
+  }
+  .filter-caret { font-size: 10px; transition: transform 0.15s; }
+  .filter-caret.open { transform: rotate(180deg); }
+  .filter-panel {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    z-index: 20;
+    width: min(340px, 100%);
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    padding: 10px;
+    max-height: 340px;
+    overflow-y: auto;
+  }
+  .filter-panel.open { display: block; }
+  .filter-actions {
+    display: flex;
+    gap: 8px;
+    padding: 2px 4px 10px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 6px;
+  }
+  .filter-actions button {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--navy);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px 4px;
+  }
+  .cat-option {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 7px 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13.5px;
+  }
+  .cat-option:hover { background: #f3ede2; }
+  .cat-option input { flex: 0 0 auto; width: 15px; height: 15px; accent-color: var(--navy); }
+  .cat-option span.label { flex: 1; }
+  .cat-option span.n { color: var(--ink-soft); font-size: 12px; }
+  .group-header {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 22px 2px 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--line);
+  }
+  .group-header:first-child { margin-top: 0; }
+  #results { min-height: 60px; }
+  .placeholder {
+    text-align: center;
+    padding: 36px 16px;
+    color: var(--ink-soft);
+    font-size: 14px;
+    border: 1px dashed var(--line);
+    border-radius: 10px;
+  }
+  .result-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--alert);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+  .badge {
+    flex: 0 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--alert);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    overflow: hidden;
+  }
+  .badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: #fff;
+  }
+  .r-name { font-weight: 700; font-size: 15.5px; margin: 0 0 2px; }
+  .r-name-mm { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 5px; }
+  .r-cat {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--navy);
+    background: var(--navy-tint);
+    padding: 2px 9px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  .clear-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #eef7ee;
+    border: 1px solid #cfe6cf;
+    border-left: 5px solid #2f7d32;
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .clear-badge {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #2f7d32;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .count-row {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin: 2px 2px 14px;
+  }
+  .footer-note {
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .footer-note a { color: var(--navy); }
+  .result-card.dirty-card { border-left-color: #b8860b; }
+  .result-card.dirty-card .r-cat { background: #fdf3d7; color: #856404; }
+  .dirty-badge { background: #b8860b; }
+  mark {
+    background: #ffe27a;
+    color: inherit;
+    padding: 0 1px;
+    border-radius: 2px;
+  }
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid var(--ink);
+  }
+  .toggle-btn {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background: var(--card);
+    color: var(--ink-soft);
+    transition: all 0.2s;
+  }
+  .toggle-btn.active {
+    background: var(--navy);
+    color: #fff;
+  }
+  .toggle-btn:not(.active):hover {
+    background: var(--navy-tint);
+  }
+  .result-card { cursor: pointer; }
+  .result-card:hover {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+    transition: all 0.15s ease;
+  }
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .modal-overlay.open {
+    display: flex;
+  }
+  .modal {
+    background: var(--card);
+    border-radius: 16px;
+    max-width: 480px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalIn 0.2s ease;
+  }
+  @keyframes modalIn {
+    from { opacity: 0; transform: scale(0.95) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  .modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.08);
+    color: var(--ink-soft);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .modal-close:hover { background: rgba(0,0,0,0.15); }
+  .modal-header {
+    padding: 28px 24px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .modal-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .modal-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: #fff;
+  }
+  .modal-logo.red { background: var(--alert); }
+  .modal-logo.amber { background: var(--amber); }
+  .modal-name {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 6px;
+    line-height: 1.3;
+  }
+  .modal-name-mm {
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin: 0 0 12px;
+  }
+  .modal-cat {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 20px;
+    background: var(--navy-tint);
+    color: var(--navy);
+  }
+  .modal-cat.amber { background: #fdf3d7; color: #856404; }
+  .modal-body {
+    padding: 20px 24px 24px;
+  }
+  .modal-section {
+    margin-bottom: 16px;
+  }
+  .modal-section:last-child { margin-bottom: 0; }
+  .modal-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    margin: 0 0 6px;
+  }
+  .modal-value {
+    font-size: 14px;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.5;
+  }
+  .modal-warning {
+    background: #fff3f3;
+    border: 1px solid #fdd;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .modal-warning-icon {
+    flex: 0 0 auto;
+    font-size: 18px;
+    line-height: 1;
+    margin-top: 1px;
+  }
+  .modal-warning p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--alert-dark);
+    line-height: 1.5;
+  }
+  .modal-warning.amber {
+    background: #fffbe6;
+    border-color: #f0e6b8;
+  }
+  .modal-warning.amber p { color: #6d5a00; }
+  .modal-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .modal-product-tag {
+    display: inline-block;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--ink);
+    background: #f0f1f4;
+    border: 1px solid var(--line);
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+</style>
+</head>
+<body>
+<div class="dvb-hero">
+  <p class="htitle">
+    <img src="logo/dvb_logo.png" alt="DVB" onerror="this.style.display='none';" />
+    Boycott company checker
+  </p>
+</div>
+<div class="wrap">
+  <!-- <p class="eyebrow">DVB Data Team</p> -->
+  <h1>ကုမ္ပဏီအမည် ရှာဖွေပြီး Boycott စာရင်း ပါမပါ စစ်ဆေးပါ</h1>
+  <p class="sub">စစ်အုပ်စုနှင့် ဆက်စပ်နေသည့် ကုမ္ပဏီ၊ ကုန်ပစ္စည်း သို့မဟုတ် ဝန်ဆောင်မှု အမည်ကို အောက်တွင် ရိုက်ထည့်ပြီး ဘွိုင်းကောက်စာရင်းတွင် ပါဝင်မပါဝင် ချက်ချင်းစစ်ဆေးနိုင်ပါသည်။</p>
+  <p class="sub">အချက်အလက်ရင်းမြစ် — Burma Campaing UK မှ စုစည်းထားသော Military-linked business boycott list စာရင်းသည် အချိန်နှင့်အမျှ ပြောင်းလဲနိုင်သဖြင့် နောက်ဆုံးရ အတည်ပြုချက်အတွက် မူရင်းရင်းမြစ်ကို ဆက်လက်စစ်ဆေးပါရန် အကြံပြုအပ်ပါသည်။ ကုန်ပစ္စည်း/အမှတ်တံဆိပ်အမည်အများစုကို ကုန်ပစ္စည်းအထုပ်အပိုးပေါ်ရှိအတိုင်း အင်္ဂလိပ်လိုသာ ဖော်ပြထားပါသည်။</p>
+
+  <div class="toggle-row">
+    <button class="toggle-btn active" id="toggleMyanmar" type="button">🇲🇲 Myanmar Boycott List</button>
+    <button class="toggle-btn" id="toggleDirty" type="button">🌏 Dirty List</button>
+  </div>
+
+  <div class="search-box">
+    <input id="q" type="text" autocomplete="off" placeholder="အမည်ကို ရိုက်ထည့်ပြီး ဘွိုင်းကောက်စာရင်းတွင် ပါဝင်မှု ရှိမရှိ စစ်ဆေးရန်" />
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="7"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  </div>
+
+  <div class="filter-row">
+    <button class="filter-btn" id="filterBtn" type="button">
+      <span>အမျိုးအစားဖြင့် စစ်ထုတ်ရန်</span>
+      <span class="filter-count" id="filterCount"></span>
+      <span class="filter-caret" id="filterCaret">&#9660;</span>
+    </button>
+    <div class="filter-panel" id="filterPanel">
+      <div class="filter-actions">
+        <button type="button" id="selectAllBtn">အားလုံးရွေးရန်</button>
+        <button type="button" id="clearAllBtn">အားလုံးဖြုတ်ရန်</button>
+      </div>
+      <div id="catList"></div>
+    </div>
+  </div>
+
+  <p class="hint">အောက်တွင် စာရင်းအပြည့်ကို ကြည့်ရှုနိုင်ပြီး၊ အထက်တွင် ရိုက်ထည့်၍လည်း ရှာဖွေနိုင်ပါသည်။</p>
+
+  <div id="results"></div>
+
+  <!-- <div class="footer-note">
+    အချက်အလက်ရင်းမြစ် — Burma Campaing UK မှ စုစည်းထားသော Military-linked business boycott list စာရင်းသည် အချိန်နှင့်အမျှ ပြောင်းလဲနိုင်သဖြင့် နောက်ဆုံးရ အတည်ပြုချက်အတွက် မူရင်းရင်းမြစ်ကို ဆက်လက်စစ်ဆေးပါရန် အကြံပြုအပ်ပါသည်။ ကုန်ပစ္စည်း/အမှတ်တံဆိပ်အမည်အများစုကို ကုန်ပစ္စည်းအထုပ်အပိုးပေါ်ရှိအတိုင်း အင်္ဂလိပ်လိုသာ ဖော်ပြထားပါသည်။
+  </div> -->
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close" id="modalClose" type="button">&times;</button>
+    <div class="modal-header">
+      <div class="modal-logo" id="modalLogo"></div>
+      <p class="modal-name" id="modalName"></p>
+      <p class="modal-name-mm" id="modalNameMm"></p>
+      <span class="modal-cat" id="modalCat"></span>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <p class="modal-label">အမျိုးအစား (Category)</p>
+        <p class="modal-value" id="modalCatFull"></p>
+      </div>
+      <div class="modal-section" id="modalBurmeseSection" style="display:none">
+        <p class="modal-label">မြန်မာအမည်</p>
+        <p class="modal-value" id="modalBurmeseFull"></p>
+      </div>
+      <div class="modal-section" id="modalProductsSection" style="display:none">
+        <p class="modal-label">ထုတ်ကုန်များ / Products</p>
+        <div class="modal-products" id="modalProducts"></div>
+      </div>
+      <div class="modal-section">
+        <p class="modal-label">Boycott အကြောင်းအရာ</p>
+        <div class="modal-warning" id="modalWarning">
+          <span class="modal-warning-icon">&#9888;</span>
+          <p id="modalWarningText"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="data/boycott-data.js"></script>
+<script>
+const q = document.getElementById('q');
+const results = document.getElementById('results');
+const filterBtn = document.getElementById('filterBtn');
+const filterCaret = document.getElementById('filterCaret');
+const filterPanel = document.getElementById('filterPanel');
+const filterCount = document.getElementById('filterCount');
+const catList = document.getElementById('catList');
+const selectAllBtn = document.getElementById('selectAllBtn');
+const clearAllBtn = document.getElementById('clearAllBtn');
+const toggleMyanmar = document.getElementById('toggleMyanmar');
+const toggleDirty = document.getElementById('toggleDirty');
+
+let activeList = 'myanmar';
+let RECORDS = MYANMAR_RECORDS;
+
+let CATS = [];
+let CAT_COUNTS = {};
+let selectedCats = new Set();
+
+function rebuildCats() {
+  CATS = [];
+  CAT_COUNTS = {};
+  RECORDS.forEach(r => {
+    if (!(r.c in CAT_COUNTS)) { CATS.push(r.c); CAT_COUNTS[r.c] = 0; }
+    CAT_COUNTS[r.c]++;
+  });
+  selectedCats = new Set(CATS);
+}
+
+rebuildCats();
+
+// Generate placeholder with first letter of company name
+function getInitial(name) {
+  return name.charAt(0).toUpperCase();
+}
+
+function generatePlaceholder(name) {
+  const initial = getInitial(name);
+  const colors = ['#c00000', '#8a0000', '#b8860b', '#2f7d32', '#1a5276', '#6c3483', '#c0392b', '#d35400'];
+  let hash = 0;
+  for (let i = 0; i < name.length; i++) {
+    hash = name.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const color = colors[Math.abs(hash) % colors.length];
+  return 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="' + color + '"/><text x="50" y="55" font-family="Arial,sans-serif" font-size="40" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">' + initial + '</text></svg>');
+}
+
+// Auto-match logo by company name
+// Converts company name to possible filenames and checks logo/ directory
+const LOGO_EXT = ['.png', '.jpg', '.jpeg', '.svg', '.webp'];
+const LOGO_DIR = 'logo/';
+
+// Cache for loaded logos to avoid repeated checks
+const logoCache = {};
+
+function nameToFileName(name) {
+  // Remove special characters, replace spaces with underscores
+  return name
+    .replace(/[\/\\()]/g, '')
+    .replace(/\s+/g, '_')
+    .replace(/[^a-zA-Z0-9_.-]/g, '');
+}
+
+function getLogoVariants(name) {
+  const variants = [];
+  const clean = nameToFileName(name);
+  variants.push(clean);
+  
+  // Try first word if name is long
+  const words = name.split(/\s+/);
+  if (words.length > 1) {
+    variants.push(words[0]);
+  }
+  
+  // Try with _Logo suffix
+  variants.push(clean + '_Logo');
+  
+  // Try without parentheses content
+  const noParen = name.replace(/\([^)]*\)/g, '').trim();
+  if (noParen !== name) {
+    variants.push(nameToFileName(noParen));
+  }
+  
+  return variants;
+}
+
+function getLogoPath(name) {
+  if (logoCache[name] !== undefined) {
+    return logoCache[name];
+  }
+  
+  const variants = getLogoVariants(name);
+  const placeholder = generatePlaceholder(name);
+  
+  // Return first variant with default extension - onerror will handle fallback
+  if (variants.length > 0) {
+    const path = LOGO_DIR + variants[0] + '.png';
+    logoCache[name] = path;
+    return path;
+  }
+  
+  logoCache[name] = placeholder;
+  return placeholder;
+}
+
+function escapeHtml(s) {
+  return s.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+
+function highlight(text, term) {
+  if (!term) return escapeHtml(text);
+  const termNoSpace = term.toLowerCase().replace(/\s+/g, '');
+  const textNoSpace = text.toLowerCase().replace(/\s+/g, '');
+  const idx = textNoSpace.indexOf(termNoSpace);
+  if (idx === -1) return escapeHtml(text);
+  let pos = 0;
+  let textIdx = 0;
+  while (textIdx < text.length && pos < idx) {
+    if (text[textIdx] !== ' ') pos++;
+    textIdx++;
+  }
+  const start = textIdx;
+  let end = start;
+  while (end < text.length && pos < idx + termNoSpace.length) {
+    if (text[end] !== ' ') pos++;
+    end++;
+  }
+  const before = escapeHtml(text.slice(0, start));
+  const match = escapeHtml(text.slice(start, end));
+  const after = escapeHtml(text.slice(end));
+  return before + '<mark>' + match + '</mark>' + after;
+}
+
+function buildCatList() {
+  catList.innerHTML = CATS.map(function(c, i) {
+    const id = 'cat_' + i;
+    return '<label class="cat-option" for="' + id + '">' +
+      '<input type="checkbox" id="' + id + '" data-cat="' + escapeHtml(c) + '" checked />' +
+      '<span class="label">' + escapeHtml(c) + '</span>' +
+      '<span class="n">' + CAT_COUNTS[c] + '</span>' +
+    '</label>';
+  }).join('');
+  catList.querySelectorAll('input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      const cat = cb.getAttribute('data-cat');
+      if (cb.checked) selectedCats.add(cat); else selectedCats.delete(cat);
+      updateFilterCount();
+      render(q.value);
+    });
+  });
+}
+
+function updateFilterCount() {
+  if (selectedCats.size === CATS.length) {
+    filterCount.textContent = '';
+    filterCount.style.display = 'none';
+  } else {
+    filterCount.textContent = selectedCats.size;
+    filterCount.style.display = 'inline-block';
+  }
+}
+
+function renderCard(r, t) {
+  const mmLine = r.b ? '<p class="r-name-mm">' + escapeHtml(r.b) + '</p>' : '';
+  const logoSrc = getLogoPath(r.n);
+  const placeholder = generatePlaceholder(r.n);
+  return '<div class="result-card">' +
+    '<div class="badge"><img src="' + logoSrc + '" alt="" onerror="tryNextExtension(this, \'' + r.n.replace(/'/g, "\\'") + '\', 0);" /></div>' +
+    '<div><p class="r-name">' + highlight(r.n, t) + '</p>' +
+    mmLine +
+    '<span class="r-cat">' + escapeHtml(r.c) + '</span></div>' +
+  '</div>';
+}
+
+// Try loading logo with different extensions
+function tryNextExtension(img, name, idx) {
+  const variants = getLogoVariants(name);
+  const variantIdx = Math.floor(idx / LOGO_EXT.length);
+  const extIdx = idx % LOGO_EXT.length;
+  
+  if (variantIdx >= variants.length) {
+    // All variants exhausted, show placeholder
+    img.src = generatePlaceholder(name);
+    img.onerror = function() {
+      img.remove();
+      img.parentElement.textContent = getInitial(name);
+    };
+    return;
+  }
+  
+  const nextSrc = LOGO_DIR + variants[variantIdx] + LOGO_EXT[extIdx];
+  img.src = nextSrc;
+  img.onerror = function() {
+    tryNextExtension(img, name, idx + 1);
+  };
+}
+
+function render(term) {
+  const t = term.trim();
+  const tl = t.toLowerCase().replace(/\s+/g, '');
+
+  const matches = RECORDS.filter(function(r) {
+    if (!selectedCats.has(r.c)) return false;
+    if (t.length === 0) return true;
+    const nameNoSpace = r.n.toLowerCase().replace(/\s+/g, '');
+    const burmeseNoSpace = r.b ? r.b.replace(/\s+/g, '') : '';
+    return nameNoSpace.includes(tl) || (r.b && burmeseNoSpace.includes(t.replace(/\s+/g, '')));
+  });
+
+  if (selectedCats.size === 0) {
+    results.innerHTML = '<div class="placeholder">အနည်းဆုံး အမျိုးအစားတစ်ခု ရွေးပါ</div>';
+    return;
+  }
+
+  if (matches.length === 0) {
+    results.innerHTML =
+      '<div class="clear-card">' +
+        '<div class="clear-badge">&#10003;</div>' +
+        '<div><p class="r-name">စာရင်းတွင် မတွေ့ရှိပါ</p>' +
+        '<p style="margin:0;font-size:13px;color:var(--ink-soft)">"' + escapeHtml(t) + '" သည် လက်ရှိ boycott စာရင်းတွင် (သို့) ရွေးထားသော အမျိုးအစားများတွင် မပါဝင်ပါ။</p></div>' +
+      '</div>';
+    return;
+  }
+
+  let html = '<p class="count-row">' + matches.length + ' ခု တွေ့ရှိပါသည်</p>';
+
+  if (t.length === 0) {
+    const grouped = new Map();
+    matches.forEach(function(r) {
+      if (!grouped.has(r.c)) grouped.set(r.c, []);
+      grouped.get(r.c).push(r);
+    });
+    grouped.forEach(function(items, cat) {
+      html += '<div class="group-header">' + escapeHtml(cat) + ' (' + items.length + ')</div>';
+      html += items.map(function(r) { return renderCard(r, ''); }).join('');
+    });
+  } else {
+    html += matches.map(function(r) { return renderCard(r, t); }).join('');
+  }
+
+  results.innerHTML = html;
+}
+
+toggleMyanmar.addEventListener('click', function() {
+  if (activeList === 'myanmar') return;
+  activeList = 'myanmar';
+  RECORDS = MYANMAR_RECORDS;
+  toggleMyanmar.classList.add('active');
+  toggleDirty.classList.remove('active');
+  rebuildCats();
+  buildCatList();
+  updateFilterCount();
+  render(q.value);
+});
+toggleDirty.addEventListener('click', function() {
+  if (activeList === 'dirty') return;
+  activeList = 'dirty';
+  RECORDS = DIRTY_RECORDS;
+  toggleDirty.classList.add('active');
+  toggleMyanmar.classList.remove('active');
+  rebuildCats();
+  buildCatList();
+  updateFilterCount();
+  render(q.value);
+});
+
+filterBtn.addEventListener('click', function() {
+  filterPanel.classList.toggle('open');
+  filterCaret.classList.toggle('open');
+});
+document.addEventListener('click', function(e) {
+  if (!filterBtn.contains(e.target) && !filterPanel.contains(e.target)) {
+    filterPanel.classList.remove('open');
+    filterCaret.classList.remove('open');
+  }
+});
+selectAllBtn.addEventListener('click', function() {
+  selectedCats = new Set(CATS);
+  catList.querySelectorAll('input[type="checkbox"]').forEach(function(cb) { cb.checked = true; });
+  updateFilterCount();
+  render(q.value);
+});
+clearAllBtn.addEventListener('click', function() {
+  selectedCats = new Set();
+  catList.querySelectorAll('input[type="checkbox"]').forEach(function(cb) { cb.checked = false; });
+  updateFilterCount();
+  render(q.value);
+});
+q.addEventListener('input', () => render(q.value));
+
+buildCatList();
+updateFilterCount();
+render('');
+
+// Modal logic
+const modalOverlay = document.getElementById('modalOverlay');
+const modalClose = document.getElementById('modalClose');
+const modalLogo = document.getElementById('modalLogo');
+const modalName = document.getElementById('modalName');
+const modalNameMm = document.getElementById('modalNameMm');
+const modalCat = document.getElementById('modalCat');
+const modalCatFull = document.getElementById('modalCatFull');
+const modalBurmeseSection = document.getElementById('modalBurmeseSection');
+const modalBurmeseFull = document.getElementById('modalBurmeseFull');
+const modalProductsSection = document.getElementById('modalProductsSection');
+const modalProducts = document.getElementById('modalProducts');
+const modalWarning = document.getElementById('modalWarning');
+const modalWarningText = document.getElementById('modalWarningText');
+
+function openModal(record) {
+  const isDirty = activeList === 'dirty';
+  const logoSrc = getLogoPath(record.n);
+  const initial = getInitial(record.n);
+  const logoClass = isDirty ? 'amber' : 'red';
+
+  modalLogo.className = 'modal-logo ' + logoClass;
+  modalLogo.innerHTML = '<img src="' + logoSrc + '" alt="" onerror="tryNextExtension(this, \'' + record.n.replace(/'/g, "\\'") + '\', 0);" />';
+
+  modalName.textContent = record.n;
+  modalNameMm.textContent = record.b || '';
+  modalNameMm.style.display = record.b ? '' : 'none';
+
+  modalCat.textContent = record.c;
+  modalCat.className = 'modal-cat' + (isDirty ? ' amber' : '');
+  modalCatFull.textContent = record.c;
+
+  if (record.b) {
+    modalBurmeseSection.style.display = '';
+    modalBurmeseFull.textContent = record.b;
+  } else {
+    modalBurmeseSection.style.display = 'none';
+  }
+
+  if (record.p && record.p.length > 0) {
+    modalProductsSection.style.display = '';
+    modalProducts.innerHTML = record.p.map(function(item) {
+      return '<span class="modal-product-tag">' + escapeHtml(item) + '</span>';
+    }).join('');
+  } else if (PRODUCT_DATA[record.n] && PRODUCT_DATA[record.n].length > 0) {
+    modalProductsSection.style.display = '';
+    modalProducts.innerHTML = PRODUCT_DATA[record.n].map(function(item) {
+      return '<span class="modal-product-tag">' + escapeHtml(item) + '</span>';
+    }).join('');
+  } else {
+    modalProductsSection.style.display = 'none';
+  }
+
+  if (isDirty) {
+    modalWarning.className = 'modal-warning amber';
+    modalWarningText.textContent = 'This company is on the Dirty List — linked to international military or authoritarian regimes. Consider avoiding its products and services.';
+  } else {
+    modalWarning.className = 'modal-warning';
+    modalWarningText.textContent = 'ဒီကုမ္ပဏီသည် မြန်မာစစ်တပ်နှင့် ဆက်စပ်နေပြီး ဘွိုင်းကောက်စာရင်းတွင် ပါဝင်ပါသည်။ ကုန်ပစ္စည်းနှင့် ဝန်ဆောင်မှုများကို ရှောင်ရှားသင့်ပါသည်။';
+  }
+
+  modalOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  modalOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+modalClose.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', function(e) {
+  if (e.target === modalOverlay) closeModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+results.addEventListener('click', function(e) {
+  const card = e.target.closest('.result-card');
+  if (!card) return;
+  const nameEl = card.querySelector('.r-name');
+  if (!nameEl) return;
+  const rawName = nameEl.textContent.trim();
+  const record = RECORDS.find(function(r) { return r.n === rawName; });
+  if (record) openModal(record);
+});
+</script>
+</body>
+</html>
