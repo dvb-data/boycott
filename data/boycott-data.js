@@ -1,13 +1,13 @@
 window.MYANMAR_RECORDS = [
   {
     "c": "Banking and Finance",
-    "n": "Aung Myint Moh Min Insurance",
-    "b": "အောင်မြင့်မိုရ်မင်း အာမခံ"
+    "n": "Aung Myint Mo Min Securities",
+    "b": null
   },
   {
     "c": "Banking and Finance",
-    "n": "Aung Myint Mo Min Securities",
-    "b": null
+    "n": "Aung Myint Moh Min Insurance",
+    "b": "အောင်မြင့်မိုရ်မင်း အာမခံ"
   },
   {
     "c": "Banking and Finance",
@@ -51,17 +51,17 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Clothing",
+    "n": "Smart",
+    "b": null
+  },
+  {
+    "c": "Clothing",
     "n": "Smart Fashion",
     "b": null
   },
   {
     "c": "Clothing",
     "n": "Smart Gentleman Fashion",
-    "b": null
-  },
-  {
-    "c": "Clothing",
-    "n": "Smart",
     "b": null
   },
   {
@@ -136,17 +136,17 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Entertainment/Tourism",
-    "n": "Myawady Music Band",
-    "b": null
-  },
-  {
-    "c": "Entertainment/Tourism",
     "n": "Myawaddy Tours and Travel",
     "b": null
   },
   {
     "c": "Entertainment/Tourism",
     "n": "Myawaddy Travels and Tours",
+    "b": null
+  },
+  {
+    "c": "Entertainment/Tourism",
+    "n": "Myawady Music Band",
     "b": null
   },
   {
@@ -231,12 +231,17 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Food and Drink",
-    "n": "First Choice Tinned River Cat Fish",
+    "n": "First Choice Tinned Beef Curry",
     "b": null
   },
   {
     "c": "Food and Drink",
-    "n": "First Choice Tinned Beef Curry",
+    "n": "First Choice Tinned Butter Bean",
+    "b": null
+  },
+  {
+    "c": "Food and Drink",
+    "n": "First Choice Tinned Chicken and Potato Curry",
     "b": null
   },
   {
@@ -256,22 +261,17 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Food and Drink",
+    "n": "First Choice Tinned Hilsa",
+    "b": null
+  },
+  {
+    "c": "Food and Drink",
     "n": "First Choice Tinned Mango Pickle",
     "b": null
   },
   {
     "c": "Food and Drink",
-    "n": "First Choice Tinned Chicken and Potato Curry",
-    "b": null
-  },
-  {
-    "c": "Food and Drink",
-    "n": "First Choice Tinned Butter Bean",
-    "b": null
-  },
-  {
-    "c": "Food and Drink",
-    "n": "First Choice Tinned Hilsa",
+    "n": "First Choice Tinned River Cat Fish",
     "b": null
   },
   {
@@ -282,6 +282,11 @@ window.MYANMAR_RECORDS = [
   {
     "c": "Food and Drink",
     "n": "Keen Beer",
+    "b": null
+  },
+  {
+    "c": "Food and Drink",
+    "n": "MEC Myanmar Rice",
     "b": null
   },
   {
@@ -311,11 +316,6 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Food and Drink",
-    "n": "MEC Myanmar Rice",
-    "b": null
-  },
-  {
-    "c": "Food and Drink",
     "n": "Milky Sweetened Condensed Milk",
     "b": null
   },
@@ -341,17 +341,12 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Food and Drink",
-    "n": "Nan Myaing Black Coffee",
-    "b": null
-  },
-  {
-    "c": "Food and Drink",
     "n": "Nan Myaing 2+1 Coffee",
     "b": null
   },
   {
     "c": "Food and Drink",
-    "n": "Nan Myaing Pure Arabica Coffee",
+    "n": "Nan Myaing Black Coffee",
     "b": null
   },
   {
@@ -361,13 +356,13 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Food and Drink",
-    "n": "Nay Pyi Taw Water",
-    "b": "နေပြည်တော်သောက်ရေ"
+    "n": "Nan Myaing Pure Arabica Coffee",
+    "b": null
   },
   {
     "c": "Food and Drink",
-    "n": "Ngwe Pinlae Livestock and Breeding (Silver Sea)",
-    "b": "ငွေပင်လယ်မွေးမြူရေးလုပ်ငန်း"
+    "n": "Nay Pyi Taw Water",
+    "b": "နေပြည်တော်သောက်ရေ"
   },
   {
     "c": "Food and Drink",
@@ -376,13 +371,18 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Food and Drink",
-    "n": "Okkan Sugar/Okkan Sugar Mill",
-    "b": "အုတ်ကန်သကြားစက်"
+    "n": "Ngwe Pinlae Livestock and Breeding (Silver Sea)",
+    "b": "ငွေပင်လယ်မွေးမြူရေးလုပ်ငန်း"
   },
   {
     "c": "Food and Drink",
     "n": "OSM Sugar (Oktwin Sugar Mill Sugar)",
     "b": null
+  },
+  {
+    "c": "Food and Drink",
+    "n": "Okkan Sugar/Okkan Sugar Mill",
+    "b": "အုတ်ကန်သကြားစက်"
   },
   {
     "c": "Food and Drink",
@@ -401,7 +401,7 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Food and Drink",
-    "n": "Shwe Phee Oo Black Tea",
+    "n": "Shwe Phe Oo Lemon Tea",
     "b": null
   },
   {
@@ -411,7 +411,7 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Food and Drink",
-    "n": "Shwe Phe Oo Lemon Tea",
+    "n": "Shwe Phee Oo Black Tea",
     "b": null
   },
   {
@@ -426,11 +426,6 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Food and Drink",
-    "n": "Sun Full Cream Milk Powder",
-    "b": null
-  },
-  {
-    "c": "Food and Drink",
     "n": "Sugarmec",
     "b": null
   },
@@ -441,77 +436,12 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Food and Drink",
+    "n": "Sun Full Cream Milk Powder",
+    "b": null
+  },
+  {
+    "c": "Food and Drink",
     "n": "Yangon Amber Beer",
-    "b": null
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Dagon hand sanitizer spray",
-    "b": null
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Dagon hand sanitiser gel (available in various scents)",
-    "b": null
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Dentomec Toothbrushes",
-    "b": null
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Dentomec Toothpaste",
-    "b": null
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Life Coconut Oil (moisturiser)",
-    "b": null
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Padonmar bathing soap",
-    "b": null
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Padonmar detergent powder (clothes cleaning powder)",
-    "b": null
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Padonmar laundry soap",
-    "b": null
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Padonma Soap",
-    "b": null
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Smart.p cloth Facemask",
-    "b": null
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Star Mask Disposable Face Mask",
-    "b": null
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Star Sanitizing Spray",
-    "b": null
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Star Sanitizing Gel",
-    "b": null
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Thant Sin Hand Sanitizer",
     "b": null
   },
   {
@@ -590,6 +520,76 @@ window.MYANMAR_RECORDS = [
     "b": null
   },
   {
+    "c": "Health and Beauty Products",
+    "n": "Dagon hand sanitiser gel (available in various scents)",
+    "b": null
+  },
+  {
+    "c": "Health and Beauty Products",
+    "n": "Dagon hand sanitizer spray",
+    "b": null
+  },
+  {
+    "c": "Health and Beauty Products",
+    "n": "Dentomec Toothbrushes",
+    "b": null
+  },
+  {
+    "c": "Health and Beauty Products",
+    "n": "Dentomec Toothpaste",
+    "b": null
+  },
+  {
+    "c": "Health and Beauty Products",
+    "n": "Life Coconut Oil (moisturiser)",
+    "b": null
+  },
+  {
+    "c": "Health and Beauty Products",
+    "n": "Padonma Soap",
+    "b": null
+  },
+  {
+    "c": "Health and Beauty Products",
+    "n": "Padonmar bathing soap",
+    "b": null
+  },
+  {
+    "c": "Health and Beauty Products",
+    "n": "Padonmar detergent powder (clothes cleaning powder)",
+    "b": null
+  },
+  {
+    "c": "Health and Beauty Products",
+    "n": "Padonmar laundry soap",
+    "b": null
+  },
+  {
+    "c": "Health and Beauty Products",
+    "n": "Smart.p cloth Facemask",
+    "b": null
+  },
+  {
+    "c": "Health and Beauty Products",
+    "n": "Star Mask Disposable Face Mask",
+    "b": null
+  },
+  {
+    "c": "Health and Beauty Products",
+    "n": "Star Sanitizing Gel",
+    "b": null
+  },
+  {
+    "c": "Health and Beauty Products",
+    "n": "Star Sanitizing Spray",
+    "b": null
+  },
+  {
+    "c": "Health and Beauty Products",
+    "n": "Thant Sin Hand Sanitizer",
+    "b": null
+  },
+  {
     "c": "Industrial Estates/Offices",
     "n": "Indagaw Industrial Zone",
     "b": null
@@ -661,7 +661,7 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "International Trade",
-    "n": "Lann Pyi Marine trucking services",
+    "n": "Lann Pyi Marine",
     "b": null
   },
   {
@@ -676,17 +676,17 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "International Trade",
-    "n": "Lann Pyi Marine multi-modal transportation services",
-    "b": null
-  },
-  {
-    "c": "International Trade",
     "n": "Lann Pyi Marine logistic service",
     "b": null
   },
   {
     "c": "International Trade",
-    "n": "Lann Pyi Marine",
+    "n": "Lann Pyi Marine multi-modal transportation services",
+    "b": null
+  },
+  {
+    "c": "International Trade",
+    "n": "Lann Pyi Marine trucking services",
     "b": null
   },
   {
@@ -706,12 +706,12 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "International Trade",
-    "n": "Thilawa Shipbreaking Yard",
+    "n": "TMT Port Terminal, Yangon",
     "b": null
   },
   {
     "c": "International Trade",
-    "n": "TMT Port Terminal, Yangon",
+    "n": "Thilawa Shipbreaking Yard",
     "b": null
   },
   {
@@ -741,17 +741,17 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Manufacturing",
+    "n": "MEC Marble (produce a range of vases, statues and plant containers)",
+    "b": null
+  },
+  {
+    "c": "Manufacturing",
     "n": "Marble Concrete Factory (Mandalay)",
     "b": null
   },
   {
     "c": "Manufacturing",
     "n": "Marble Tiles Factory Company",
-    "b": null
-  },
-  {
-    "c": "Manufacturing",
-    "n": "MEC Marble (produce a range of vases, statues and plant containers)",
     "b": null
   },
   {
@@ -806,12 +806,12 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Media",
-    "n": "Knowledge World Journal (aka Thuta Kabar Journal)",
+    "n": "Knowledge World Journal (Thuta Gabar Journal)",
     "b": null
   },
   {
     "c": "Media",
-    "n": "Knowledge World Journal (Thuta Gabar Journal)",
+    "n": "Knowledge World Journal (aka Thuta Kabar Journal)",
     "b": null
   },
   {
@@ -821,52 +821,7 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Media",
-    "n": "MWD Documentary TV Channel",
-    "b": null
-  },
-  {
-    "c": "Media",
-    "n": "MWD Education, Knowledge and Sports TV Channel",
-    "b": null
-  },
-  {
-    "c": "Media",
-    "n": "MWD Family TV Channel",
-    "b": null
-  },
-  {
-    "c": "Media",
     "n": "MWD Media",
-    "b": null
-  },
-  {
-    "c": "Media",
-    "n": "MWD Movies TV Channel",
-    "b": null
-  },
-  {
-    "c": "Media",
-    "n": "MWD Music TV Channel",
-    "b": null
-  },
-  {
-    "c": "Media",
-    "n": "MWD Series TV Channel",
-    "b": null
-  },
-  {
-    "c": "Media",
-    "n": "MWD Shopping TV Channel",
-    "b": null
-  },
-  {
-    "c": "Media",
-    "n": "MWD Variety TV Channel",
-    "b": null
-  },
-  {
-    "c": "Media",
-    "n": "Myawaddy (MWD) TV Channel",
     "b": null
   },
   {
@@ -876,8 +831,18 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Media",
+    "n": "Myawaddy Yathazone Magazine",
+    "b": null
+  },
+  {
+    "c": "Media",
     "n": "Myawady Daily",
     "b": "မြဝတီနေ့စဉ်သတင်းစာ"
+  },
+  {
+    "c": "Media",
+    "n": "Myawady Literature House/Myawaddy Library/Myawati Library",
+    "b": null
   },
   {
     "c": "Media",
@@ -891,22 +856,12 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Media",
-    "n": "Myawaddy Yathazone Magazine",
-    "b": null
-  },
-  {
-    "c": "Media",
-    "n": "Myawady Literature House/Myawaddy Library/Myawati Library",
+    "n": "Nghwe Ta Yi Magazine",
     "b": null
   },
   {
     "c": "Media",
     "n": "Ngwe Tar Yi Magazine",
-    "b": null
-  },
-  {
-    "c": "Media",
-    "n": "Nghwe Ta Yi Magazine",
     "b": null
   },
   {
@@ -921,12 +876,12 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Media",
-    "n": "Tayza Booklet",
+    "n": "Tayza (children's cartoon magazine)",
     "b": null
   },
   {
     "c": "Media",
-    "n": "Tayza (children's cartoon magazine)",
+    "n": "Tayza Booklet",
     "b": null
   },
   {
@@ -1116,12 +1071,12 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Transport",
-    "n": "Myawaddy Petrol Stations",
+    "n": "Myawaddy Petrol Distribution and Retail",
     "b": null
   },
   {
     "c": "Transport",
-    "n": "Myawaddy Petrol Distribution and Retail",
+    "n": "Myawaddy Petrol Stations",
     "b": null
   },
   {
@@ -1156,12 +1111,17 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Transport",
+    "n": "Shwe Mann Thu Express (also spelt Shwe Man Thu)",
+    "b": null
+  },
+  {
+    "c": "Transport",
     "n": "Shwe Mann Thu Highway Bus Station",
     "b": null
   },
   {
     "c": "Transport",
-    "n": "Shwe Mann Thu Express (also spelt Shwe Man Thu)",
+    "n": "Shwe Mann Thu Long Distance Transport",
     "b": null
   },
   {
@@ -1172,11 +1132,6 @@ window.MYANMAR_RECORDS = [
   {
     "c": "Transport",
     "n": "Than Myan Thu Express",
-    "b": null
-  },
-  {
-    "c": "Transport",
-    "n": "Shwe Mann Thu Long Distance Transport",
     "b": null
   }
 ];
@@ -2442,5 +2397,16 @@ window.PRODUCT_DATA = {
     "Taung Gyi",
     "Thanlwin",
     "U Thar"
+  ],
+  "MWD Media": [
+    "MWD Documentary TV Channel",
+    "MWD Education, Knowledge and Sports TV Channel",
+    "MWD Family TV Channel",
+    "MWD Movies TV Channel",
+    "MWD Music TV Channel",
+    "MWD Series TV Channel",
+    "MWD Shopping TV Channel",
+    "MWD Variety TV Channel",
+    "Myawaddy (MWD) TV Channel"
   ]
 };
