@@ -114,4 +114,4 @@ This tool is provided for public use to support the boycott movement against mil
 
 ---
 
-**Source**: DVB Data Team / Justice For Myanmar / Burma Campaign UK
+**Source**: DVB Data Team / Burma Campaign UK
