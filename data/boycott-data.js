@@ -362,22 +362,22 @@ window.MYANMAR_RECORDS = [
   {
     "c": "Food and Drink",
     "n": "Nay Pyi Taw Water",
-    "b": null
+    "b": "နေပြည်တော်သောက်ရေ"
   },
   {
     "c": "Food and Drink",
     "n": "Ngwe Pinlae Livestock and Breeding (Silver Sea)",
-    "b": null
+    "b": "ငွေပင်လယ်မွေးမြူရေးလုပ်ငန်း"
   },
   {
     "c": "Food and Drink",
     "n": "Ngwe Pin Lei Premium Marine Products (Silver Sea)",
-    "b": null
+    "b": "ငွေပင်လယ်ပင်လယ်ထုတ်ကုန်"
   },
   {
     "c": "Food and Drink",
     "n": "Okkan Sugar/Okkan Sugar Mill",
-    "b": null
+    "b": "အုတ်ကန်သကြားစက်"
   },
   {
     "c": "Food and Drink",
@@ -407,7 +407,7 @@ window.MYANMAR_RECORDS = [
   {
     "c": "Food and Drink",
     "n": "Shwe Phe Oo Teamix",
-    "b": null
+    "b": "ရွှေဖီဦးလက်ဖက်ရည်"
   },
   {
     "c": "Food and Drink",
@@ -417,7 +417,7 @@ window.MYANMAR_RECORDS = [
   {
     "c": "Food and Drink",
     "n": "Silver Sea Fish",
-    "b": null
+    "b": "ငွေပင်လယ်ငါးလုပ်ငန်း"
   },
   {
     "c": "Food and Drink",
