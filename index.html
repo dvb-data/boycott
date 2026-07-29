@@ -510,7 +510,7 @@
   <!-- <p class="eyebrow">DVB Data Team</p> -->
   <h1>ကုမ္ပဏီအမည် ရှာဖွေပြီး Boycott စာရင်း ပါမပါ စစ်ဆေးပါ</h1>
   <p class="sub">စစ်အုပ်စုနှင့် ဆက်စပ်နေသည့် ကုမ္ပဏီ၊ ကုန်ပစ္စည်း သို့မဟုတ် ဝန်ဆောင်မှု အမည်ကို အောက်တွင် ရိုက်ထည့်ပြီး ဘွိုင်းကောက်စာရင်းတွင် ပါဝင်မပါဝင် ချက်ချင်းစစ်ဆေးနိုင်ပါသည်။</p>
-  <p class="sub">အချက်အလက်ရင်းမြစ် — Burma Campaing UK မှ စုစည်းထားသော Military-linked business boycott list စာရင်းသည် အချိန်နှင့်အမျှ ပြောင်းလဲနိုင်သဖြင့် နောက်ဆုံးရ အတည်ပြုချက်အတွက် မူရင်းရင်းမြစ်ကို ဆက်လက်စစ်ဆေးပါရန် အကြံပြုအပ်ပါသည်။ ကုန်ပစ္စည်း/အမှတ်တံဆိပ်အမည်အများစုကို ကုန်ပစ္စည်းအထုပ်အပိုးပေါ်ရှိအတိုင်း အင်္ဂလိပ်လိုသာ ဖော်ပြထားပါသည်။</p>
+  <p class="sub">အချက်အလက်ရင်းမြစ် — <a href="https://www.burmacampaign.org.uk/" target="_blank">Burma Campaign UK</a> မှ Military-linked business boycott list စာရင်းကိုအခြေခံ၍ DVB Data Team မှပြန်လည်စုစည်းထားပါသည်။ ဤစာရင်းသည် အချိန်နှင့်အမျှ ပြောင်းလဲနိုင်သဖြင့် နောက်ဆုံးရ အတည်ပြုချက်အတွက် မူရင်းရင်းမြစ်ကို ဆက်လက်စစ်ဆေးပါရန် အကြံပြုအပ်ပါသည်။</p>
 
   <div class="toggle-row">
     <button class="toggle-btn active" id="toggleMyanmar" type="button">🇲🇲 Myanmar Boycott List</button>
@@ -643,7 +643,8 @@ function nameToFileName(name) {
   return name
     .replace(/[\/\\()]/g, '')
     .replace(/\s+/g, '_')
-    .replace(/[^a-zA-Z0-9_.-]/g, '');
+    .replace(/[^a-zA-Z0-9_.-]/g, '')
+    .replace(/[._-]+$/, '');
 }
 
 function getLogoVariants(name) {

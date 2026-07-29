@@ -862,7 +862,7 @@ window.MYANMAR_RECORDS = [
   {
     "c": "Media",
     "n": "Ngwe Tar Yi Magazine",
-    "b": null
+    "b": "ငွေတာရီမဂ္ဂဇင်း"
   },
   {
     "c": "Media",
