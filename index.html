@@ -567,13 +567,15 @@
         <p class="modal-label">ထုတ်ကုန်များ / Products</p>
         <div class="modal-products" id="modalProducts"></div>
       </div>
-      <div class="modal-section">
-        <p class="modal-label">အကြောင်းအရာ</p>
-        <div class="modal-warning" id="modalWarning">
-          <span class="modal-warning-icon">&#9888;</span>
-          <p id="modalWarningText"></p>
-        </div>
+      <div class="modal-section" id="modalInfoSection" style="display:none">
+        <p class="modal-label">ကုမ္ပဏီအကြောင်း</p>
+        <p class="modal-value" id="modalInfo"></p>
       </div>
+      <div class="modal-section" id="modalSrcSection" style="display:none">
+        <p class="modal-label">ရင်းမြစ် / Source</p>
+        <p class="modal-value" id="modalSrc"></p>
+      </div>
+
     </div>
   </div>
 </div>
@@ -886,8 +888,10 @@ const modalBurmeseSection = document.getElementById('modalBurmeseSection');
 const modalBurmeseFull = document.getElementById('modalBurmeseFull');
 const modalProductsSection = document.getElementById('modalProductsSection');
 const modalProducts = document.getElementById('modalProducts');
-const modalWarning = document.getElementById('modalWarning');
-const modalWarningText = document.getElementById('modalWarningText');
+const modalInfoSection = document.getElementById('modalInfoSection');
+const modalInfo = document.getElementById('modalInfo');
+const modalSrcSection = document.getElementById('modalSrcSection');
+const modalSrc = document.getElementById('modalSrc');
 
 function openModal(record) {
   const isDirty = activeList === 'dirty';
@@ -927,13 +931,33 @@ function openModal(record) {
     modalProductsSection.style.display = 'none';
   }
 
-  if (isDirty) {
-    modalWarning.className = 'modal-warning amber';
-    modalWarningText.textContent = 'This company is listed on the Dirty List for its reported direct or indirect links to supporting the Myanmar military. Consider avoiding its products and services.';
+  if (record.info) {
+    modalInfoSection.style.display = '';
+    modalInfo.textContent = record.info;
   } else {
-    modalWarning.className = 'modal-warning';
-    modalWarningText.textContent = 'ဒီကုမ္ပဏီသည် မြန်မာစစ်တပ်နှင့် ဆက်စပ်နေပြီး ဘွိုင်းကောက်စာရင်းတွင် ပါဝင်သောကြောင့် ကုန်ပစ္စည်းနှင့် ဝန်ဆောင်မှုများကို ရှောင်ရှားသင့်ပါသည်။';
+    modalInfoSection.style.display = 'none';
   }
+
+  if (record.src && Array.isArray(record.src) && record.src.length > 0) {
+    modalSrcSection.style.display = '';
+    modalSrc.innerHTML = record.src.map(s => {
+      if (s.url) {
+        return '<a href="' + escapeHtml(s.url) + '" target="_blank" rel="noopener">' + escapeHtml(s.text || s.url) + '</a>';
+      }
+      return escapeHtml(s.text || s);
+    }).join(', ');
+  } else if (record.src && typeof record.src === 'string') {
+    modalSrcSection.style.display = '';
+    if (/^https?:\/\//.test(record.src)) {
+      modalSrc.innerHTML = '<a href="' + escapeHtml(record.src) + '" target="_blank" rel="noopener">' + escapeHtml(record.src) + '</a>';
+    } else {
+      modalSrc.textContent = record.src;
+    }
+  } else {
+    modalSrcSection.style.display = 'none';
+  }
+
+
 
   modalOverlay.classList.add('open');
   document.body.style.overflow = 'hidden';
