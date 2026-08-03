@@ -5746,3 +5746,805 @@ window.PRODUCT_DATA = {
     "Myawaddy (MWD) TV Channel"
   ]
 };
+
+
+window.MOPFI_RECORDS = [
+  {
+    "c": "Cigarettes",
+    "n": "Premium Gold",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Cigarettes",
+    "n": "Red Ruby",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Beverages",
+    "n": "Andaman",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Beverages",
+    "n": "Black Shield Beer",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Beverages",
+    "n": "Myanmar Beer",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Beverages",
+    "n": "Mandalay Beer",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Beverages",
+    "n": "Dagon Beer",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Condensed Milk",
+    "n": "Seven7",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Condensed Milk",
+    "n": "Milky",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Health & Beauty",
+    "n": "Padonmar Soap",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Health & Beauty",
+    "n": "Dentomac Toothpaste",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Health & Beauty",
+    "n": "Dentomac Toothbrush",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Cement",
+    "n": "Sin Min",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Cement",
+    "n": "Myin Pyan",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Minimarts",
+    "n": "547 Minimart",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Minimarts",
+    "n": "Kha Yae Pin Mart",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Wholesale / Retail",
+    "n": "Ruby Mart",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Wholesale / Retail",
+    "n": "Gandamar Wholesale",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Manufacturing",
+    "n": "Vega Plastic",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Manufacturing",
+    "n": "Heaven Kitchenware",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Jewelry & Gems",
+    "n": "Shwe Nan Taw",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Jewelry & Gems",
+    "n": "Forever Gems by Shwe Nan Taw",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Jewelry & Gems",
+    "n": "The Myanmar Gems Emporium",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Car Tires",
+    "n": "Tristars Tires",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Tea Mix",
+    "n": "Shwe Phi Oo Tea Mix",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Rice",
+    "n": "MEC Myanmar Rice",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Rice",
+    "n": "Adipadi Rice",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Miscellaneous",
+    "n": "Sigma Wire and Cable Factory",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Miscellaneous",
+    "n": "Naypyidaw Drinking Water",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Miscellaneous",
+    "n": "Silver Sea Paper Carton Box Production Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Miscellaneous",
+    "n": "MEC Marble",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Steel",
+    "n": "Myanmar POSCO C&C Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Steel",
+    "n": "Myanmar POSCO Steel Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Trading Companies",
+    "n": "Adipati Agricultural Produce Trading Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Trading Companies",
+    "n": "Myawaddy Trading Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Trading Companies",
+    "n": "Shwe Gandamar International Trading Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Industrial Zones",
+    "n": "Indagaw Industrial Zone",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Industrial Zones",
+    "n": "Pyinmabin Industrial Estate",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Container Transport and Port",
+    "n": "Myanma Five Star Line Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Container Transport and Port",
+    "n": "Hlaing Dry Port, ICD and Logistics Centre (HDILC)",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Container Transport and Port",
+    "n": "Thilawa Shipbreaking Yard",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Livestock Breedings & Fisheries",
+    "n": "Ngwe Pin Lae Livestock Breedings & Fisheries Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Livestock Breedings & Fisheries",
+    "n": "Ngwe Pin Lae Premium Marine Products Trading Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Ports",
+    "n": "Ahlone International Port Terminal 1 (Yangon)",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Ports",
+    "n": "Boaungkyaw Terminal (Yangon)",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Ports",
+    "n": "TMT Port Terminal (Yangon)",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Ports",
+    "n": "MEC Container Transport",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Ports",
+    "n": "Hlaing Dry Port (Inland Container Depot and Logistics Centre)",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Ports",
+    "n": "Hteedan International Port Terminal (Yangon)",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Marine Services",
+    "n": "Lann Pyi Marine Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Logistics & Purchased Services",
+    "n": "Arrow Logistics and Purchased Services",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
+    "n": "Everfit Gym – Everfit Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
+    "n": "7th Sense Entertainment – Seventh Sense Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
+    "n": "Stellar Seven – Stellar Seven Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
+    "n": "The Yangon Restaurant",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
+    "n": "The Yangon Gallery",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
+    "n": "Attractive Myanmar – Attractive Myanmar Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
+    "n": "Azura Beach Hotel",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Construction (Min Aung Hlaing)",
+    "n": "Sky One – Sky One Construction Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Construction (Min Aung Hlaing)",
+    "n": "Pinnacle Asia – Pinnacle Asia Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Trading (Min Aung Hlaing)",
+    "n": "Bhone Myat Pyae Sone Trading Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Trading (Min Aung Hlaing)",
+    "n": "Nyein Chan Pyae Sone Manufacturing & Trading Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Medical Supply Business (Min Aung Hlaing)",
+    "n": "A&M Mahar – A & M Mahar Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Others (Min Aung Hlaing)",
+    "n": "Apower Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Others (Min Aung Hlaing)",
+    "n": "Photo City Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Wedding Event And Led Light Decorations Service (General Maung Maung Kyaw)",
+    "n": "Paramount Events Myanmar Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Construction (Maung Maung Kyaw)",
+    "n": "Paramount Myanmar Alliance Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Bulk material handling industry (Maung Maung Kyaw)",
+    "n": "Singa Systems Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Manufacturing (Lieutenant-General Aung Lin Dwe)",
+    "n": "Shwe Yee Phyo Pyae Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Construction (Aung Lin Dwe)",
+    "n": "Aung Myint Mo Lin Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Construction (Aung Lin Dwe)",
+    "n": "Mingalar Aung Myay Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "General Trading (Admiral Tin Aung San)",
+    "n": "Global Icon General Trading Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Healthcare",
+    "n": "Defence Services General Hospitals",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Healthcare",
+    "n": "Kan Thar Yar Hospital",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Healthcare",
+    "n": "Military Institute of Nursing and Paramedical Science",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Healthcare",
+    "n": "500-Bed Military Hospital",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Healthcare",
+    "n": "Moe Kaung Treasure Maternal and Child Hospital",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Tourism",
+    "n": "Myawaddy Travels & Tours Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Restaurants",
+    "n": "Diamond White Restaurant Yangon",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Restaurants",
+    "n": "Nan Myaing Café (Pwin Oo Lwin)",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Petroleum",
+    "n": "Myawaddy",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Petroleum",
+    "n": "Star High",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Hotel",
+    "n": "Central Hotel",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Insurance",
+    "n": "Aung Myint Moh Min Insurance Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Insurance",
+    "n": "Aung Thitsar Oo Insurance Company Limited",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Ballroom Rental",
+    "n": "Shwe Gandamar Ballroom (Pathein)",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Ballroom Rental",
+    "n": "Shwe Gandamar Grand Ballroom (Yangon)",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Ballroom Rental",
+    "n": "Kha Yae Pin Ballroom (Mingaladon)",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Bank",
+    "n": "Myawaddy Bank",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Bank",
+    "n": "Innwa Bank",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Entertainment",
+    "n": "Hanthawaddy Golf And Country Club",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Entertainment",
+    "n": "Okkala Golf Resort",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Entertainment",
+    "n": "Royal Sportainment Complex",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Entertainment",
+    "n": "Yangon Indoor Skydiving",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Mobile Services",
+    "n": "MyTel",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Mobile Services",
+    "n": "MECTel",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Mobile Services",
+    "n": "MyTel Pay",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Mobile Services",
+    "n": "Myanmar Mobile Money",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Media",
+    "n": "Myawaddy Television / Magazine",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Media",
+    "n": "Thazin FM Radio",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Media",
+    "n": "MRTV – Myanmar Radio and Television",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Newspaper",
+    "n": "The Union Daily",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Newspaper",
+    "n": "Yandanarpon Daily",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Transportation Services",
+    "n": "Pathein Thu Express",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Transportation Services",
+    "n": "Shan Ma Lay Express",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Transportation Services",
+    "n": "Shwe Mann Thu Highway Bus Station",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Transportation Services",
+    "n": "Shwe Mann Thu Express",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Transportation Services",
+    "n": "Shwe Myaing Thu Express",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Transportation Services",
+    "n": "Than Myan Thu Express",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Transportation Services",
+    "n": "Bandoola Taxi",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Transportation Services",
+    "n": "Bandoola Transportation",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Transportation Services",
+    "n": "Parami CNG Station",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Transportation Services",
+    "n": "Parami Express",
+    "b": null,
+    "info": null,
+    "src": null
+  },
+  {
+    "c": "Transportation Services",
+    "n": "Parami Taxi",
+    "b": null,
+    "info": null,
+    "src": null
+  }
+];

@@ -1,3 +1,4 @@
 logo/NO_LOGO_FOUND.md
 .DS_Store
-.py
+*.py
+src/*.json
