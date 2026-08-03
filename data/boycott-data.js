@@ -5891,21 +5891,21 @@ window.MOPFI_RECORDS = [
   },
   {
     "c": "Jewelry & Gems",
-    "n": "Shwe Nan Taw",
+    "n": "Shwe Nan Taw", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Jewelry & Gems",
-    "n": "Forever Gems by Shwe Nan Taw",
+    "n": "Forever Gems by Shwe Nan Taw", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Jewelry & Gems",
-    "n": "The Myanmar Gems Emporium",
+    "n": "The Myanmar Gems Emporium", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
@@ -5968,14 +5968,14 @@ window.MOPFI_RECORDS = [
   },
   {
     "c": "Steel",
-    "n": "Myanmar POSCO C&C Company Limited",
+    "n": "Myanmar POSCO C&C Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Steel",
-    "n": "Myanmar POSCO Steel Company Limited",
+    "n": "Myanmar POSCO Steel Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
@@ -6059,7 +6059,7 @@ window.MOPFI_RECORDS = [
   },
   {
     "c": "Ports",
-    "n": "Boaungkyaw Terminal (Yangon)",
+    "n": "Boaungkyaw Terminal (Yangon)", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
@@ -6101,154 +6101,154 @@ window.MOPFI_RECORDS = [
   },
   {
     "c": "Logistics & Purchased Services",
-    "n": "Arrow Logistics and Purchased Services",
+    "n": "Arrow Logistics and Purchased Services", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
-    "n": "Everfit Gym – Everfit Company Limited",
+    "n": "Everfit Gym – Everfit Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
-    "n": "7th Sense Entertainment – Seventh Sense Company Limited",
+    "n": "7th Sense Entertainment – Seventh Sense Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
-    "n": "Stellar Seven – Stellar Seven Company Limited",
+    "n": "Stellar Seven – Stellar Seven Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
-    "n": "The Yangon Restaurant",
+    "n": "The Yangon Restaurant", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
-    "n": "The Yangon Gallery",
+    "n": "The Yangon Gallery", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
-    "n": "Attractive Myanmar – Attractive Myanmar Company Limited",
+    "n": "Attractive Myanmar – Attractive Myanmar Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
-    "n": "Azura Beach Hotel",
+    "n": "Azura Beach Hotel", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Construction (Min Aung Hlaing)",
-    "n": "Sky One – Sky One Construction Company Limited",
+    "n": "Sky One – Sky One Construction Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Construction (Min Aung Hlaing)",
-    "n": "Pinnacle Asia – Pinnacle Asia Company Limited",
+    "n": "Pinnacle Asia – Pinnacle Asia Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Trading (Min Aung Hlaing)",
-    "n": "Bhone Myat Pyae Sone Trading Company Limited",
+    "n": "Bhone Myat Pyae Sone Trading Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Trading (Min Aung Hlaing)",
-    "n": "Nyein Chan Pyae Sone Manufacturing & Trading Company Limited",
+    "n": "Nyein Chan Pyae Sone Manufacturing & Trading Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Medical Supply Business (Min Aung Hlaing)",
-    "n": "A&M Mahar – A & M Mahar Company Limited",
+    "n": "A&M Mahar – A & M Mahar Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Others (Min Aung Hlaing)",
-    "n": "Apower Company Limited",
+    "n": "Apower Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Others (Min Aung Hlaing)",
-    "n": "Photo City Company Limited",
+    "n": "Photo City Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Wedding Event And Led Light Decorations Service (General Maung Maung Kyaw)",
-    "n": "Paramount Events Myanmar Company Limited",
+    "n": "Paramount Events Myanmar Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Construction (Maung Maung Kyaw)",
-    "n": "Paramount Myanmar Alliance Company Limited",
+    "n": "Paramount Myanmar Alliance Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Bulk material handling industry (Maung Maung Kyaw)",
-    "n": "Singa Systems Company Limited",
+    "n": "Singa Systems Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Manufacturing (Lieutenant-General Aung Lin Dwe)",
-    "n": "Shwe Yee Phyo Pyae Company Limited",
+    "n": "Shwe Yee Phyo Pyae Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Construction (Aung Lin Dwe)",
-    "n": "Aung Myint Mo Lin Company Limited",
+    "n": "Aung Myint Mo Lin Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Construction (Aung Lin Dwe)",
-    "n": "Mingalar Aung Myay Company Limited",
+    "n": "Mingalar Aung Myay Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "General Trading (Admiral Tin Aung San)",
-    "n": "Global Icon General Trading Company Limited",
+    "n": "Global Icon General Trading Company Limited", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
@@ -6276,14 +6276,14 @@ window.MOPFI_RECORDS = [
   },
   {
     "c": "Healthcare",
-    "n": "500-Bed Military Hospital",
+    "n": "500-Bed Military Hospital", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
   },
   {
     "c": "Healthcare",
-    "n": "Moe Kaung Treasure Maternal and Child Hospital",
+    "n": "Moe Kaung Treasure Maternal and Child Hospital", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
@@ -6318,7 +6318,7 @@ window.MOPFI_RECORDS = [
   },
   {
     "c": "Petroleum",
-    "n": "Star High",
+    "n": "Star High", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
@@ -6451,7 +6451,7 @@ window.MOPFI_RECORDS = [
   },
   {
     "c": "Media",
-    "n": "MRTV – Myanmar Radio and Television",
+    "n": "MRTV – Myanmar Radio and Television", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
@@ -6465,7 +6465,7 @@ window.MOPFI_RECORDS = [
   },
   {
     "c": "Newspaper",
-    "n": "Yandanarpon Daily",
+    "n": "Yandanarpon Daily", //not in Burma Campaing UK
     "b": null,
     "info": null,
     "src": null
