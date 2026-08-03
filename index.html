@@ -518,7 +518,7 @@
 <div class="wrap">
   <!-- <p class="eyebrow">DVB Data Team</p> -->
   <!-- <h1>ကုမ္ပဏီအမည် ရှာဖွေပြီး Boycott စာရင်း ပါမပါ စစ်ဆေးပါ</h1> -->
-  <p class="sub">ဤ Dashboard သည် <a href="https://www.burmacampaign.org.uk/" target="_blank">Burma Campaign UK</a>  နှင့် <a href="https://mopfi.nugmyanmar.org/" target="_blank">အမျိုးသားညီညွတ်ရေးအစိုးရ (NUG) စီမံကိန်း၊ ဘဏ္ဍာရေးနှင့် ရင်းနှီးမြှုပ်နှံမှုဝန်ကြီးဌာန (MOPFI)</a> တို့မှ ထုတ်ပြန်ထားသော အချက်အလက်များကို ပြန်လည်စုစည်း၍ အသုံးပြုသူများအနေဖြင့် တစ်နေရာတည်းတွင် အလွယ်တကူ ရှာဖွေကြည့်ရှုနိုင်ရန် ရည်ရွယ်၍ ဖန်တီးထားပါသည်။
+  <p class="sub">ဤ Dashboard သည် Burma Campaign UK နှင့် အမျိုးသားညီညွတ်ရေးအစိုးရ (NUG) စီမံကိန်း၊ ဘဏ္ဍာရေးနှင့် ရင်းနှီးမြှုပ်နှံမှုဝန်ကြီးဌာန (MOPFI) တို့မှ ထုတ်ပြန်ထားသော အချက်အလက်များကို ပြန်လည်စုစည်း၍ အသုံးပြုသူများအနေဖြင့် တစ်နေရာတည်းတွင် အလွယ်တကူ ရှာဖွေကြည့်ရှုနိုင်ရန် ရည်ရွယ်၍ ဖန်တီးထားပါသည်။
   <p class="sub">Boycott List: Burmese Military Companies တွင် မြန်မာစစ်တပ် (သို့မဟုတ်) စစ်တပ်ပိုင် စီးပွားရေးလုပ်ငန်းစုများက ပိုင်ဆိုင်ခြင်း၊ စီမံခန့်ခွဲခြင်း (သို့မဟုတ်) ထိန်းချုပ်ထားသော ကုန်ပစ္စည်းများ၊ အမှတ်တံဆိပ်များနှင့် ဝန်ဆောင်မှုများကို စုစည်းဖော်ပြထားပါသည်။</p>
   <p class="sub">The Dirty List တွင် မြန်မာစစ်တပ်အား ငွေကြေး၊ လက်နက်၊ နည်းပညာ (သို့မဟုတ်) အခြားပစ္စည်းများဖြင့် တိုက်ရိုက် (သို့မဟုတ်) သွယ်ဝိုက် ပံ့ပိုးကူညီနေသည့် နိုင်ငံတကာကုမ္ပဏီများအပြင် လူ့အခွင့်အရေးချိုးဖောက်မှုများနှင့် သဘာဝပတ်ဝန်းကျင် ပျက်စီးမှုများနှင့် ဆက်နွယ်သော စီမံကိန်းများတွင် ပါဝင်သည့် ကုမ္ပဏီများကို ဖော်ပြထားပါသည်။</p>
   <!-- <p class="sub">NUG MOPFI Boycott List တွင် အမျိုးသားညီညွတ်ရေးအစိုးရ (NUG) ၏ စီမံကိန်း၊ ဘဏ္ဍာရေးနှင့် ရင်းနှီးမြှုပ်နှံမှု ဝန်ကြီးဌာန (MOPFI) မှ ထုတ်ပြန်ထားသော စစ်တပ်နှင့် ဆက်စပ်သည့် ကုန်ပစ္စည်းများ၊ ဝန်ဆောင်မှုများနှင့် စီးပွားရေးလုပ်ငန်းများ စာရင်းကို ဖော်ပြထားပါသည်။</p> -->
@@ -617,12 +617,22 @@ let CATS = [];
 let CAT_COUNTS = {};
 let selectedCats = new Set();
 
+function recordCats(r) {
+  return Array.isArray(r.c) ? r.c : [r.c];
+}
+
+function catLabel(c) {
+  return Array.isArray(c) ? c.join(' / ') : c;
+}
+
 function rebuildCats() {
   CATS = [];
   CAT_COUNTS = {};
   RECORDS.forEach(r => {
-    if (!(r.c in CAT_COUNTS)) { CATS.push(r.c); CAT_COUNTS[r.c] = 0; }
-    CAT_COUNTS[r.c]++;
+    recordCats(r).forEach(c => {
+      if (!(c in CAT_COUNTS)) { CATS.push(c); CAT_COUNTS[c] = 0; }
+      CAT_COUNTS[c]++;
+    });
   });
   selectedCats = new Set(CATS);
 }
@@ -769,7 +779,7 @@ function renderCard(r, t) {
     '<div class="badge"><img src="' + logoSrc + '" alt="" onerror="tryNextExtension(this, \'' + r.n.replace(/'/g, "\\'") + '\', 0);" /></div>' +
     '<div><p class="r-name">' + highlight(r.n, t) + '</p>' +
     mmLine +
-    '<span class="r-cat">' + escapeHtml(r.c) + '</span></div>' +
+    '<span class="r-cat">' + escapeHtml(catLabel(r.c)) + '</span></div>' +
   '</div>';
 }
 
@@ -801,7 +811,7 @@ function render(term) {
   const tl = t.toLowerCase().replace(/\s+/g, '');
 
   const matches = RECORDS.filter(function(r) {
-    if (!selectedCats.has(r.c)) return false;
+    if (!recordCats(r).some(function(c) { return selectedCats.has(c); })) return false;
     if (t.length === 0) return true;
     const nameNoSpace = r.n.toLowerCase().replace(/\s+/g, '');
     const burmeseNoSpace = r.b ? r.b.replace(/\s+/g, '') : '';
@@ -828,8 +838,9 @@ function render(term) {
   if (t.length === 0) {
     const grouped = new Map();
     matches.forEach(function(r) {
-      if (!grouped.has(r.c)) grouped.set(r.c, []);
-      grouped.get(r.c).push(r);
+      const key = catLabel(r.c);
+      if (!grouped.has(key)) grouped.set(key, []);
+      grouped.get(key).push(r);
     });
     grouped.forEach(function(items, cat) {
       html += '<div class="group-header">' + escapeHtml(cat) + ' (' + items.length + ')</div>';
@@ -937,9 +948,9 @@ function openModal(record) {
   modalNameMm.textContent = record.b || '';
   modalNameMm.style.display = record.b ? '' : 'none';
 
-  modalCat.textContent = record.c;
+  modalCat.textContent = catLabel(record.c);
   modalCat.className = 'modal-cat' + (isDirty ? ' amber' : '');
-  modalCatFull.textContent = record.c;
+  modalCatFull.textContent = catLabel(record.c);
 
   if (record.b) {
     modalBurmeseSection.style.display = '';
