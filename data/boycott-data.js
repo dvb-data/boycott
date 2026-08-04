@@ -645,14 +645,14 @@ window.MYANMAR_RECORDS = [
 
     "src": ["Burma Campaing UK"]
   },
-  {
-    "c": "Food and Drink",
-    "n": "Shwe Phe Oo Lemon Tea",
-    "b": null,
-    "info": null,
+  // {
+  //   "c": "Food and Drink",
+  //   "n": "Shwe Phe Oo Lemon Tea",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
+  //   "src": ["Burma Campaing UK"]
+  // },
   {
     "c": "Food and Drink",
     "n": "Shwe Phe Oo Teamix",
@@ -661,14 +661,14 @@ window.MYANMAR_RECORDS = [
 
     "src": ["Burma Campaing UK"]
   },
-  {
-    "c": "Food and Drink",
-    "n": "Shwe Phee Oo Black Tea",
-    "b": null,
-    "info": null,
+  // {
+  //   "c": "Food and Drink",
+  //   "n": "Shwe Phee Oo Black Tea",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
+  //   "src": ["Burma Campaing UK"]
+  // },
   // {
   //   "c": "Food and Drink",
   //   "n": "Silver Sea Fish",
@@ -709,14 +709,14 @@ window.MYANMAR_RECORDS = [
 
     "src": ["Burma Campaing UK"]
   },
-  {
-    "c": "Food and Drink",
-    "n": "Yangon Amber Beer",
-    "b": null,
-    "info": null,
+  // {
+  //   "c": "Food and Drink",
+  //   "n": "Yangon Amber Beer",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
+  //   "src": ["Burma Campaing UK"]
+  // },
   {
     "c": "Health Services",
     "n": "ARJ Syringes",
@@ -885,30 +885,30 @@ window.MYANMAR_RECORDS = [
 
     "src": ["Burma Campaing UK"]
   },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Padonmar bathing soap",
-    "b": null,
-    "info": null,
+  // {
+  //   "c": "Health and Beauty Products",
+  //   "n": "Padonmar bathing soap",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Padonmar detergent powder (clothes cleaning powder)",
-    "b": null,
-    "info": null,
+  //   "src": ["Burma Campaing UK"]
+  // },
+  // {
+  //   "c": "Health and Beauty Products",
+  //   "n": "Padonmar detergent powder (clothes cleaning powder)",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Padonmar laundry soap",
-    "b": null,
-    "info": null,
+  //   "src": ["Burma Campaing UK"]
+  // },
+  // {
+  //   "c": "Health and Beauty Products",
+  //   "n": "Padonmar laundry soap",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
+  //   "src": ["Burma Campaing UK"]
+  // },
   {
     "c": "Health and Beauty Products",
     "n": "Smart.p cloth Facemask",
@@ -1825,147 +1825,147 @@ window.MYANMAR_RECORDS = [
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
+    "c": ["Media", "Entertainment "],
     "n": "Everfit Gym – Everfit Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
+    "c": ["Media", "Entertainment "],
     "n": "7th Sense Entertainment – Seventh Sense Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
+    "c": ["Media", "Entertainment "],
     "n": "Stellar Seven – Stellar Seven Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
+    "c": ["Media", "Entertainment "],
     "n": "The Yangon Restaurant",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
+    "c": ["Media", "Entertainment "],
     "n": "The Yangon Gallery",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
+    "c": ["Media", "Entertainment "],
     "n": "Attractive Myanmar – Attractive Myanmar Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Media / Entertainment (Senior General Min Aung Hlaing)",
+    "c": ["Media", "Entertainment "],
     "n": "Azura Beach Hotel",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Construction (Min Aung Hlaing)",
+    "c": "Construction",
     "n": "Sky One – Sky One Construction Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Construction (Min Aung Hlaing)",
+    "c": "Construction",
     "n": "Pinnacle Asia – Pinnacle Asia Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Trading (Min Aung Hlaing)",
+    "c": "Trading",
     "n": "Bhone Myat Pyae Sone Trading Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Trading (Min Aung Hlaing)",
+    "c": "Trading",
     "n": "Nyein Chan Pyae Sone Manufacturing & Trading Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Medical Supply Business (Min Aung Hlaing)",
+    "c": "Medical Supply Business",
     "n": "A&M Mahar – A & M Mahar Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Others (Min Aung Hlaing)",
+    "c": "Others",
     "n": "Apower Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Others (Min Aung Hlaing)",
+    "c": "Others",
     "n": "Photo City Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Wedding Event And Led Light Decorations Service (General Maung Maung Kyaw)",
+    "c": "Wedding Event And Led Light Decorations Service",
     "n": "Paramount Events Myanmar Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Construction (Maung Maung Kyaw)",
+    "c": "Construction",
     "n": "Paramount Myanmar Alliance Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Bulk material handling industry (Maung Maung Kyaw)",
+    "c": "Bulk material handling industry",
     "n": "Singa Systems Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Manufacturing (Lieutenant-General Aung Lin Dwe)",
+    "c": "Manufacturing",
     "n": "Shwe Yee Phyo Pyae Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Construction (Aung Lin Dwe)",
+    "c": "Construction",
     "n": "Aung Myint Mo Lin Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "Construction (Aung Lin Dwe)",
+    "c": "Construction",
     "n": "Mingalar Aung Myay Company Limited",
     "b": null,
     "info": null,
     "src": ["NUG-MOPFI"]
   },
   {
-    "c": "General Trading (Admiral Tin Aung San)",
+    "c": "General Trading",
     "n": "Global Icon General Trading Company Limited",
     "b": null,
     "info": null,
@@ -5815,11 +5815,12 @@ window.PRODUCT_DATA = {
     "Dagon Single Malt Lager Beer",
     "Dagon sparkling lemon tea",
     "Dagon Super Lager Beer",
-    "Dagon White Rum"
-  ],
-  "Yangon Amber Beer": [
+    "Dagon White Rum",
     "Yangon Amber Beer"
   ],
+  // "Yangon Amber Beer": [
+  //   "Yangon Amber Beer"
+  // ],
   "Innwa Bank": [
     "Personal Banking",
     "Business Banking",
@@ -5909,6 +5910,17 @@ window.PRODUCT_DATA = {
     "MWD Variety TV Channel",
     "Myawaddy (MWD) TV Channel"
   ],
+  "Myawaddy Television": [
+    "MWD Documentary TV Channel",
+    "MWD Education, Knowledge and Sports TV Channel",
+    "MWD Family TV Channel",
+    "MWD Movies TV Channel",
+    "MWD Music TV Channel",
+    "MWD Series TV Channel",
+    "MWD Shopping TV Channel",
+    "MWD Variety TV Channel",
+    "Myawaddy (MWD) TV Channel"
+  ],
   "Smart": [
     "Smart Fashion",
     "Smart Gentleman Fashion",
@@ -5973,6 +5985,17 @@ window.PRODUCT_DATA = {
   "Ngwe Pin Lae Cold Store (Silver Sea)",
   "Silver Sea Fish",
   "Silver Sea Fish Farm",
+],
+"Shwe Phe Oo Teamix": [
+  "Shwe Phe Oo Teamix",
+  "Shwe Phe Oo Lemon Tea",
+  "Shwe Phee Oo Black Tea"
+],
+"Padonma Soap": [
+  "Padonmar Soap",
+  "Padonmar bathing soap",
+  "Padonmar detergent powder (clothes cleaning powder)",
+  "Padonmar laundry soap"
 ]
 };
 
