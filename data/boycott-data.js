@@ -727,44 +727,44 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Health Services",
-    "n": "Defence Services General Hospital",
-    "b": "တပ်မတော်အထွေထွေဆေးရုံကြီး",
+    "n": "Defence Services Hospital",
+    "b": "တပ်မတော်ဆေးရုံကြီး",
     "info": null,
 
     "src": ["Burma Campaing UK"]
   },
-  {
-    "c": "Health Services",
-    "n": "Defence Services Liver Hospital",
-    "b": null,
-    "info": null,
+  // {
+  //   "c": "Health Services",
+  //   "n": "Defence Services Liver Hospital",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
-  {
-    "c": "Health Services",
-    "n": "Defence Services Medical Research Centre",
-    "b": null,
-    "info": null,
+  //   "src": ["Burma Campaing UK"]
+  // },
+  // {
+  //   "c": "Health Services",
+  //   "n": "Defence Services Medical Research Centre",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
-  {
-    "c": "Health Services",
-    "n": "Defence Services Obstetrics, Gynaecology and Child Health Hospital",
-    "b": null,
-    "info": null,
+  //   "src": ["Burma Campaing UK"]
+  // },
+  // {
+  //   "c": "Health Services",
+  //   "n": "Defence Services Obstetrics, Gynaecology and Child Health Hospital",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
-  {
-    "c": "Health Services",
-    "n": "Defence Services Orthopaedics Hospital",
-    "b": null,
-    "info": null,
+  //   "src": ["Burma Campaing UK"]
+  // },
+  // {
+  //   "c": "Health Services",
+  //   "n": "Defence Services Orthopaedics Hospital",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
+  //   "src": ["Burma Campaing UK"]
+  // },
   {
     "c": "Health Services",
     "n": "Gas Factory (Mandalay) Oxygen Cylinders",
@@ -5996,6 +5996,14 @@ window.PRODUCT_DATA = {
   "Padonmar bathing soap",
   "Padonmar detergent powder (clothes cleaning powder)",
   "Padonmar laundry soap"
+],
+"Defence Services Hospital": [
+  "Defence Services General Hospital",
+  "Defence Services Liver Hospital",
+  "Defence Services Medical Research Centre",
+  "Defence Services Obstetrics, Gynaecology and Child Health Hospital",
+  "Defence Services Orthopaedics Hospital",
+
 ]
 };
 
