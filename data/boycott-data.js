@@ -839,20 +839,20 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Health and Beauty Products",
-    "n": "Dagon hand sanitiser gel (available in various scents)",
+    "n": "Dagon hand sanitiser",
     "b": null,
     "info": null,
 
     "src": ["Burma Campaing UK"]
   },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Dagon hand sanitizer spray",
-    "b": null,
-    "info": null,
+  // {
+  //   "c": "Health and Beauty Products",
+  //   "n": "Dagon hand sanitizer spray",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
+  //   "src": ["Burma Campaing UK"]
+  // },
   {
     "c": "Health and Beauty Products",
     "n": "Dentomec Toothbrushes",
@@ -927,20 +927,20 @@ window.MYANMAR_RECORDS = [
   },
   {
     "c": "Health and Beauty Products",
-    "n": "Star Sanitizing Gel",
+    "n": "Star Sanitizing",
     "b": null,
     "info": null,
 
     "src": ["Burma Campaing UK"]
   },
-  {
-    "c": "Health and Beauty Products",
-    "n": "Star Sanitizing Spray",
-    "b": null,
-    "info": null,
+  // {
+  //   "c": "Health and Beauty Products",
+  //   "n": "Star Sanitizing Spray",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
+  //   "src": ["Burma Campaing UK"]
+  // },
   {
     "c": "Health and Beauty Products",
     "n": "Thant Sin Hand Sanitizer",
@@ -1301,14 +1301,14 @@ window.MYANMAR_RECORDS = [
 
     "src": ["Burma Campaing UK"]
   },
-  {
-    "c": "Media",
-    "n": "MWD Books",
-    "b": null,
-    "info": null,
+  // {
+  //   "c": "Media",
+  //   "n": "MWD Books",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
+  //   "src": ["Burma Campaing UK"]
+  // },
   {
     "c": "Media",
     "n": "MWD Media",
@@ -1317,54 +1317,54 @@ window.MYANMAR_RECORDS = [
 
     "src": ["Burma Campaing UK"]
   },
-  {
-    "c": "Media",
-    "n": "Myawaddy Television",
-    "b": "မြဝတီရုပ်သံ",
-    "info": null,
+  // {
+  //   "c": "Media",
+  //   "n": "Myawaddy Television",
+  //   "b": "မြဝတီရုပ်သံ",
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
-  {
-    "c": "Media",
-    "n": "Myawaddy Yathazone Magazine",
-    "b": null,
-    "info": null,
+  //   "src": ["Burma Campaing UK"]
+  // },
+  // {
+  //   "c": "Media",
+  //   "n": "Myawaddy Yathazone Magazine",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
-  {
-    "c": "Media",
-    "n": "Myawady Daily",
-    "b": "မြဝတီနေ့စဉ်သတင်းစာ",
-    "info": null,
+  //   "src": ["Burma Campaing UK"]
+  // },
+  // {
+  //   "c": "Media",
+  //   "n": "Myawady Daily",
+  //   "b": "မြဝတီနေ့စဉ်သတင်းစာ",
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
-  {
-    "c": "Media",
-    "n": "Myawady Literature House/Myawaddy Library/Myawati Library",
-    "b": null,
-    "info": null,
+  //   "src": ["Burma Campaing UK"]
+  // },
+  // {
+  //   "c": "Media",
+  //   "n": "Myawady Literature House/Myawaddy Library/Myawati Library",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
-  {
-    "c": "Media",
-    "n": "Myawady Magazine",
-    "b": null,
-    "info": null,
+  //   "src": ["Burma Campaing UK"]
+  // },
+  // {
+  //   "c": "Media",
+  //   "n": "Myawady Magazine",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
-  {
-    "c": "Media",
-    "n": "Myawady Media Centre",
-    "b": null,
-    "info": null,
+  //   "src": ["Burma Campaing UK"]
+  // },
+  // {
+  //   "c": "Media",
+  //   "n": "Myawady Media Centre",
+  //   "b": null,
+  //   "info": null,
 
-    "src": ["Burma Campaing UK"]
-  },
+  //   "src": ["Burma Campaing UK"]
+  // },
   {
     "c": "Media",
     "n": "Ngwe Tar Yi Magazine",
@@ -5900,6 +5900,13 @@ window.PRODUCT_DATA = {
     "U Thar"
   ],
   "MWD Media": [
+    "Myawaddy Television",
+    "MWD Books",
+    "Myawady Daily",
+    "Myawady Literature House/Myawaddy Library/Myawati Library",
+    "Myawaddy Yathazone Magazine",
+    "Myawady Magazine",
+    "Myawady Media Centre",
     "MWD Documentary TV Channel",
     "MWD Education, Knowledge and Sports TV Channel",
     "MWD Family TV Channel",
@@ -5911,15 +5918,7 @@ window.PRODUCT_DATA = {
     "Myawaddy (MWD) TV Channel"
   ],
   "Myawaddy Television": [
-    "MWD Documentary TV Channel",
-    "MWD Education, Knowledge and Sports TV Channel",
-    "MWD Family TV Channel",
-    "MWD Movies TV Channel",
-    "MWD Music TV Channel",
-    "MWD Series TV Channel",
-    "MWD Shopping TV Channel",
-    "MWD Variety TV Channel",
-    "Myawaddy (MWD) TV Channel"
+    
   ],
   "Smart": [
     "Smart Fashion",
@@ -6004,6 +6003,14 @@ window.PRODUCT_DATA = {
   "Defence Services Obstetrics, Gynaecology and Child Health Hospital",
   "Defence Services Orthopaedics Hospital",
 
+],
+"Dagon hand sanitiser": [
+  "Dagon hand sanitizer spray",
+  "Dagon hand sanitiser gel (available in various scents)"
+],
+"Star Sanitizing": [
+  "Star Sanitizing Gel",
+  "Star Sanitizing Spray"
 ]
 };
 
