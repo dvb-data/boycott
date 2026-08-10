@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="my">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    font-family: 'Noto Sans Myanmar', 'Padauk', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background: var(--paper);
     color: var(--ink);
   }
@@ -517,11 +517,11 @@
 </div>
 <div class="wrap">
   <!-- <p class="eyebrow">DVB Data Team</p> -->
-  <!-- <h1>ကုမ္ပဏီအမည် ရှာဖွေပြီး Boycott စာရင်း ပါမပါ စစ်ဆေးပါ</h1> -->
-  <p class="sub">ဤ Dashboard သည် Burma Campaign UK နှင့် အမျိုးသားညီညွတ်ရေးအစိုးရ (NUG) စီမံကိန်း၊ ဘဏ္ဍာရေးနှင့် ရင်းနှီးမြှုပ်နှံမှုဝန်ကြီးဌာန (MOPFI) တို့မှ ထုတ်ပြန်ထားသော အချက်အလက်များကို ပြန်လည်စုစည်း၍ အသုံးပြုသူများအနေဖြင့် တစ်နေရာတည်းတွင် အလွယ်တကူ ရှာဖွေကြည့်ရှုနိုင်ရန် ရည်ရွယ်၍ ဖန်တီးထားပါသည်။
-  <p class="sub">Military-Linked Business တွင် မြန်မာစစ်တပ် (သို့မဟုတ်) စစ်တပ်ပိုင် စီးပွားရေးလုပ်ငန်းစုများက ပိုင်ဆိုင်ခြင်း၊ စီမံခန့်ခွဲခြင်း (သို့မဟုတ်) ထိန်းချုပ်ထားသော ကုန်ပစ္စည်းများ၊ အမှတ်တံဆိပ်များနှင့် ဝန်ဆောင်မှုများကို စုစည်းဖော်ပြထားပါသည်။</p>
-  <p class="sub">The Dirty List တွင် မြန်မာစစ်တပ်အား ငွေကြေး၊ လက်နက်၊ နည်းပညာ (သို့မဟုတ်) အခြားပစ္စည်းများဖြင့် တိုက်ရိုက် (သို့မဟုတ်) သွယ်ဝိုက် ပံ့ပိုးကူညီနေသည့် နိုင်ငံတကာကုမ္ပဏီများအပြင် လူ့အခွင့်အရေးချိုးဖောက်မှုများနှင့် သဘာဝပတ်ဝန်းကျင် ပျက်စီးမှုများနှင့် ဆက်နွယ်သော စီမံကိန်းများတွင် ပါဝင်သည့် ကုမ္ပဏီများကို ဖော်ပြထားပါသည်။</p>
-  <!-- <p class="sub">NUG MOPFI Boycott List တွင် အမျိုးသားညီညွတ်ရေးအစိုးရ (NUG) ၏ စီမံကိန်း၊ ဘဏ္ဍာရေးနှင့် ရင်းနှီးမြှုပ်နှံမှု ဝန်ကြီးဌာန (MOPFI) မှ ထုတ်ပြန်ထားသော စစ်တပ်နှင့် ဆက်စပ်သည့် ကုန်ပစ္စည်းများ၊ ဝန်ဆောင်မှုများနှင့် စီးပွားရေးလုပ်ငန်းများ စာရင်းကို ဖော်ပြထားပါသည်။</p> -->
+  <!-- <h1>Search company names and check if they are on the Boycott list</h1> -->
+  <p class="sub">This dashboard was created to consolidate data published by Burma Campaign UK and the Ministry of Planning, Finance and Investment (MOPFI) of the National Unity Government (NUG), aiming to allow users to easily search and view information all in one place.
+  <p class="sub">Military-Linked Business: Compiles products, brands, and services that are owned, managed, or controlled by the Myanmar military or military-owned conglomerates.</p>
+  <p class="sub">The Dirty List: Features international companies that directly or indirectly support the Myanmar military with funds, arms, technology, or other supplies, as well as companies involved in projects associated with human rights violations and environmental damage.</p>
+  <!-- <p class="sub">The NUG MOPFI Boycott List lists goods, services and businesses related to the military as published by the National Unity Government (NUG), Ministry of Planning, Finance and Investment (MOPFI).</p> -->
   
   <div class="toggle-row">
     <button class="toggle-btn active" id="toggleMyanmar" type="button">Military-Linked Business</button>
@@ -530,7 +530,7 @@
   </div>
 
   <div class="search-box">
-    <input id="q" type="text" autocomplete="off" placeholder="အမည်ကို ရိုက်ထည့်ပြီး စာရင်းတွင် ပါဝင်မှု ရှိ/မရှိ စစ်ဆေးရန်" />
+    <input id="q" type="text" autocomplete="off" placeholder="Type a name to check if it is on the list" />
     <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <circle cx="11" cy="11" r="7"></circle>
       <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -539,25 +539,25 @@
 
   <div class="filter-row">
     <button class="filter-btn" id="filterBtn" type="button">
-      <span>အမျိုးအစားဖြင့် စစ်ထုတ်ရန်</span>
+      <span>Filter by category</span>
       <span class="filter-count" id="filterCount"></span>
       <span class="filter-caret" id="filterCaret">&#9660;</span>
     </button>
     <div class="filter-panel" id="filterPanel">
       <div class="filter-actions">
-        <button type="button" id="selectAllBtn">အားလုံးရွေးရန်</button>
-        <button type="button" id="clearAllBtn">အားလုံးဖြုတ်ရန်</button>
+        <button type="button" id="selectAllBtn">Select All</button>
+        <button type="button" id="clearAllBtn">Clear All</button>
       </div>
       <div id="catList"></div>
     </div>
   </div>
 
-  <p class="hint">အောက်တွင် စာရင်းအပြည့်အစုံကို ကြည့်ရှုနိုင်ပြီး၊ အထက်တွင် ရိုက်ထည့်၍လည်း ရှာဖွေနိုင်ပါသည်။</p>
+  <p class="hint">You can view the full list below, or search by typing above.</p>
 
   <div id="results"></div>
 
   <!-- <div class="footer-note">
-    အချက်အလက်ရင်းမြစ် — Burma Campaing UK မှ စုစည်းထားသော Military-linked business boycott list စာရင်းသည် အချိန်နှင့်အမျှ ပြောင်းလဲနိုင်သဖြင့် နောက်ဆုံးရ အတည်ပြုချက်အတွက် မူရင်းရင်းမြစ်ကို ဆက်လက်စစ်ဆေးပါရန် အကြံပြုအပ်ပါသည်။ ကုန်ပစ္စည်း/အမှတ်တံဆိပ်အမည်အများစုကို ကုန်ပစ္စည်းအထုပ်အပိုးပေါ်ရှိအတိုင်း အင်္ဂလိပ်လိုသာ ဖော်ပြထားပါသည်။
+    Data source — The Military-linked business boycott list compiled by Burma Campaign UK can change over time, so we recommend checking the original source for the latest confirmation. Most product/brand names are listed in English as they appear on the product packaging.
   </div> -->
 </div>
 
@@ -572,23 +572,23 @@
     </div>
     <div class="modal-body">
       <div class="modal-section">
-        <p class="modal-label">အမျိုးအစား (Category)</p>
+        <p class="modal-label">Category</p>
         <p class="modal-value" id="modalCatFull"></p>
       </div>
       <div class="modal-section" id="modalBurmeseSection" style="display:none">
-        <p class="modal-label">မြန်မာအမည်</p>
+        <p class="modal-label">Burmese Name</p>
         <p class="modal-value" id="modalBurmeseFull"></p>
       </div>
       <div class="modal-section" id="modalProductsSection" style="display:none">
-        <p class="modal-label">ထုတ်ကုန်များ / Products</p>
+        <p class="modal-label">Products</p>
         <div class="modal-products" id="modalProducts"></div>
       </div>
       <div class="modal-section" id="modalInfoSection" style="display:none">
-        <p class="modal-label">ကုမ္ပဏီအကြောင်း</p>
+        <p class="modal-label">About the Company</p>
         <p class="modal-value" id="modalInfo"></p>
       </div>
       <div class="modal-section" id="modalSrcSection" style="display:none">
-        <p class="modal-label">ရင်းမြစ် / Source</p>
+        <p class="modal-label">Source</p>
         <p class="modal-value" id="modalSrc"></p>
       </div>
 
@@ -819,7 +819,7 @@ function render(term) {
   });
 
   if (selectedCats.size === 0) {
-    results.innerHTML = '<div class="placeholder">အနည်းဆုံး အမျိုးအစားတစ်ခု ရွေးပါ</div>';
+    results.innerHTML = '<div class="placeholder">Select at least one category</div>';
     return;
   }
 
@@ -827,13 +827,13 @@ function render(term) {
     results.innerHTML =
       '<div class="clear-card">' +
         '<div class="clear-badge">&#10003;</div>' +
-        '<div><p class="r-name">စာရင်းတွင် မတွေ့ရှိပါ</p>' +
-        '<p style="margin:0;font-size:13px;color:var(--ink-soft)">"' + escapeHtml(t) + '" သည် လက်ရှိ boycott စာရင်းတွင် (သို့) ရွေးထားသော အမျိုးအစားများတွင် မပါဝင်ပါ။</p></div>' +
+        '<div><p class="r-name">Not found in the list</p>' +
+        '<p style="margin:0;font-size:13px;color:var(--ink-soft)">"' + escapeHtml(t) + '" is not on the current boycott list or in the selected categories.</p></div>' +
       '</div>';
     return;
   }
 
-  let html = '<p class="count-row">' + matches.length + ' ခု တွေ့ရှိပါသည်။</p>';
+  let html = '<p class="count-row">' + matches.length + ' found.</p>';
 
   if (t.length === 0) {
     const grouped = new Map();
